@@ -58,7 +58,7 @@ Developer prompt → read live CAST docs → collect Imaging URL / key / optiona
 
 ## Limitations
 
-- The adapter and the tests cover Claude Code only. The CAST documentation also describes GitHub Copilot, Cursor, Codex, Gemini CLI and Claude Desktop; other adapters are welcome.
+- The skill adapter and the tests cover Claude Code only. `PROMPT.md` is harness-agnostic (it reads the live CAST documentation for the assistant you use) but has only been exercised with Claude Code. The CAST documentation also describes GitHub Copilot, Cursor, Codex, Gemini CLI and Claude Desktop; other adapters are welcome.
 - A wrong tenant does not raise a clear error (it appears as a 404 on data calls); omit the tenant if the Imaging has a single domain.
 - Setting the API key as a persistent environment variable requires fully closing and reopening VS Code (a running program only reads environment variables when it starts), and the user must reconnect the server in `/mcp`. The skill checks that the variable is visible before running the connection check.
 - The skill does not know the exact menu location of the API key in the Imaging UI (the live docs do not give it); it tells the user to open their profile page and to ask their administrator if they cannot find it.
@@ -76,7 +76,7 @@ Developer prompt → read live CAST docs → collect Imaging URL / key / optiona
 | Path | Description |
 |------|-------------|
 | `skills/mcp-connection-setup.md` | Core workflow — provider-agnostic, all providers reference this |
-| `PROMPT.md` | Copy-and-paste quick-start prompt — runs the same workflow in one paste, no skill files needed |
+| `PROMPT.md` | Copy-and-paste quick-start prompt — runs the same workflow in one paste, no skill files needed. Harness-agnostic: it makes the assistant read the live CAST docs for its own configuration file, format and approval workflow |
 | `skills/scripts/fetch_doc.sh` | Prints the current text of a documentation page (read the live docs, never a remembered copy) |
 | `skills/scripts/check_mcp.sh` | Layered connection check; reads the key from `CAST_API_KEY`, never prints it |
 | `claude/` | Claude Code adapter (slash command `/mcp-connection-setup` and skill) — copy the contents of `claude/` **and** the `skills/` folder into your project root |
