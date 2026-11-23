@@ -11,7 +11,7 @@ Assets that help you work with CAST Imaging and its MCP server.
 
 | Asset | What it does |
 |---|---|
-| [`CAST/mcp-connection-setup-imaging`](CAST/mcp-connection-setup-imaging/) | Connect Claude Code to a CAST Imaging MCP server: guides you to your API key, writes `.mcp.json` without exposing the key, and verifies the connection layer by layer. |
+| [`CAST/mcp-connection-setup-imaging`](CAST/mcp-connection-setup-imaging/) | Connect an AI coding assistant to a CAST Imaging MCP server: a generic copy-and-paste prompt for any major harness, plus a Claude Code skill. Keeps your API key out of the chat, writes the MCP configuration, and verifies the connection layer by layer. |
 | [`CAST/mcp-server-install-imaging`](CAST/mcp-server-install-imaging/) | Install or update the CAST Imaging MCP Server on the Imaging host (Linux via Docker, or Windows), matching the MCP version to your Imaging release. |
 
 Each asset has its own README (what it does, prerequisites, limitations) and a `PROMPT.md` you can
