@@ -66,6 +66,11 @@ Developer prompt → read live CAST docs → collect Imaging URL / key / optiona
 - `gatekeeper` is only verified, not installed; it has its own install guide.
 - Validated against one environment (CAST Imaging 3.6.7, MCP Server 3.0.4).
 
+**Possible future enhancements**
+
+1. **Guided exploration after setup.** Once the connection is confirmed, offer example prompts and short usage guidance so the user can discover what the CAST Imaging MCP can do (for example listing applications, transactions and data graphs, reviewing quality insights, or exploring dependencies), drawing on the example queries in the live CAST documentation.
+2. **Tenant configuration guide.** Explain what a tenant (domain) is, when the `x-user-tenant` header is needed (more than one domain, or domain mapping enabled), how to find the right domain name, how to set it (`CAST_TENANT`), and how to recognize a wrong value (a 404 on data calls, or empty answers).
+
 ## Assets / Package Contents
 
 | Path | Description |
